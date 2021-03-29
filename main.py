@@ -59,7 +59,7 @@ database["arnav"] = img_to_encoding("images/arnav.jpg", FRmodel)
 database["kailash"] = img_to_encoding("images/kailash.jpg", FRmodel)
 
 for key in database:
-    path = "/content/face_reco_ct/images2" + key
+    path = "/content/face_reco_ct/images2/" + key
     os.mkdir(path) 
 
 def verify(image_path, identity, database, model):
