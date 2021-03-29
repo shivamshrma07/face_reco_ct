@@ -88,7 +88,7 @@ for root, dirs, files in os.walk(yourpath, topdown=False):
     print(name)
     for key in database:
         if (verify('/content/face_reco_ct/' + str(name), key, database, FRmodel)):
-            shutil.move('/content/face_reco_ct/images/' + str(name), "/content/face_reco_ct/" + key + "/")
+            shutil.move('/content/face_reco_ct/images/' + str(name), "/content/face_reco_ct/images2" + key + "/")
             break
 
     # if (verify('/content/face_reco_ct/images/' + str(name), "younes", database, FRmodel)):
