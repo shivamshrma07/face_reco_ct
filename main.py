@@ -48,7 +48,6 @@ FRmodel.compile(optimizer = 'adam', loss = triplet_loss, metrics = ['accuracy'])
 load_weights_from_FaceNet(FRmodel)
 
 database = {}
-database["danielle"] = img_to_encoding("images/danielle.png", FRmodel)
 database["younes"] = img_to_encoding("images/younes.jpg", FRmodel)
 database["tian"] = img_to_encoding("images/tian.jpg", FRmodel)
 database["andrew"] = img_to_encoding("images/andrew.jpg", FRmodel)
