@@ -61,7 +61,7 @@ database["arnaud"] = img_to_encoding("images/arnaud.jpg", FRmodel)
 database["shubham"] = img_to_encoding("images/sk1.jpg", FRmodel)
 
 for key in database:
-    path = "/content/Face-Recognition/" + key
+    path = "/content/face_reco_ct/" + key
     os.mkdir(path) 
 
 def verify(image_path, identity, database, model):
@@ -82,19 +82,19 @@ def verify(image_path, identity, database, model):
 # verify("images/camera_0.jpg", "younes", database, FRmodel)
 # verify("images/camera_2.jpg", "kian", database, FRmodel)
 
-yourpath = '/content/Face-Recognition/images'
+yourpath = '/content/face_reco_ct/images'
 
 
 for root, dirs, files in os.walk(yourpath, topdown=False):
   for name in files:
     print(name)
     for key in database:
-        if (verify('/content/Face-Recognition/images/' + str(name), key, database, FRmodel)):
-            shutil.move('/content/Face-Recognition/images/' + str(name), "/content/Face-Recognition/" + key + "/")
+        if (verify('/content/face_reco_ct/' + str(name), key, database, FRmodel)):
+            shutil.move('/content/face_reco_ct/images/' + str(name), "/content/face_reco_ct/" + key + "/")
             break
 
-    # if (verify('/content/Face-Recognition/images/' + str(name), "younes", database, FRmodel)):
-    #     shutil.move('/content/Face-Recognition/images/' + str(name), "/content/Face-Recognition/images2/")
+    # if (verify('/content/face_reco_ct/images/' + str(name), "younes", database, FRmodel)):
+    #     shutil.move('/content/face_reco_ct/images/' + str(name), "/content/face_reco_ct/images2/")
     
 
 
