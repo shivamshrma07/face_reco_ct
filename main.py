@@ -48,15 +48,15 @@ FRmodel.compile(optimizer = 'adam', loss = triplet_loss, metrics = ['accuracy'])
 load_weights_from_FaceNet(FRmodel)
 
 database = {}
-database["younes"] = img_to_encoding("images/younes.jpg", FRmodel)
-database["tian"] = img_to_encoding("images/tian.jpg", FRmodel)
-database["andrew"] = img_to_encoding("images/andrew.jpg", FRmodel)
-database["kian"] = img_to_encoding("images/kian.jpg", FRmodel)
-database["dan"] = img_to_encoding("images/dan.jpg", FRmodel)
-database["bertrand"] = img_to_encoding("images/bertrand.jpg", FRmodel)
-database["benoit"] = img_to_encoding("images/benoit.jpg", FRmodel)
-database["arnaud"] = img_to_encoding("images/arnaud.jpg", FRmodel)
-database["kevin"] = img_to_encoding("images/kevin.jpg", FRmodel)
+database["ram"] = img_to_encoding("images/ram.jpg", FRmodel)
+database["radha"] = img_to_encoding("images/radha.jpg", FRmodel)
+database["arjun"] = img_to_encoding("images/arjun.jpg", FRmodel)
+database["ankit"] = img_to_encoding("images/ankit.jpg", FRmodel)
+database["raghav"] = img_to_encoding("images/raghav.jpg", FRmodel)
+database["bharat"] = img_to_encoding("images/bharat.jpg", FRmodel)
+database["parkash"] = img_to_encoding("images/parkash.jpg", FRmodel)
+database["arnav"] = img_to_encoding("images/arnav.jpg", FRmodel)
+database["kailash"] = img_to_encoding("images/kailash.jpg", FRmodel)
 
 for key in database:
     path = "/content/face_reco_ct/" + key
