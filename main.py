@@ -76,12 +76,7 @@ def verify(image_path, identity, database, model):
 
     return door_open
 
-
-# verify("images/camera_0.jpg", "younes", database, FRmodel)
-# verify("images/camera_2.jpg", "kian", database, FRmodel)
-
 yourpath = '/content/face_reco_ct/images'
-
 
 for root, dirs, files in os.walk(yourpath, topdown=False):
   for name in files:
@@ -90,29 +85,9 @@ for root, dirs, files in os.walk(yourpath, topdown=False):
         if (verify('/content/face_reco_ct/images/' + str(name), key, database, FRmodel)):
             shutil.move('/content/face_reco_ct/images/' + str(name), "/content/face_reco_ct/images2/" + key + "/")
             break
-
-    # if (verify('/content/face_reco_ct/images/' + str(name), "younes", database, FRmodel)):
-    #     shutil.move('/content/face_reco_ct/images/' + str(name), "/content/face_reco_ct/images2/")
     
 
 
-# def who_is_it(image_path, database, model):
-#     encoding = img_to_encoding(image_path, model)    
-#     min_dist = 10000
-#     for (name, x) in database.items():
-#         dist = np.linalg.norm(encoding - x)
-#         if dist < min_dist:
-#             min_dist = dist
-#             identity = name
-
-#     if min_dist > 0.7:
-#         print("Not in the database.")
-#     else:
-#         print ("it's " + str(identity) + ", the distance is " + str(min_dist))
-        
-#     return min_dist, identity
-
-# who_is_it("images/camera_0.jpg", database, FRmodel)
 
 
 
