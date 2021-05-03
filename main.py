@@ -48,7 +48,7 @@ FRmodel.compile(optimizer = 'adam', loss = triplet_loss, metrics = ['accuracy'])
 load_weights_from_FaceNet(FRmodel)
 
 database = {}
-database["shivam"] = img_to_encoding("images/shivam.jpg", FRmodel)
+
 database["ram"] = img_to_encoding("images/ram.jpg", FRmodel)
 database["radha"] = img_to_encoding("images/radha.jpg", FRmodel)
 database["arjun"] = img_to_encoding("images/arjun.jpg", FRmodel)
@@ -58,7 +58,7 @@ database["bharat"] = img_to_encoding("images/bharat.jpg", FRmodel)
 database["parkash"] = img_to_encoding("images/parkash.jpg", FRmodel)
 database["arnav"] = img_to_encoding("images/arnav.jpg", FRmodel)
 database["kailash"] = img_to_encoding("images/kailash.jpg", FRmodel)
-
+database["shivam"] = img_to_encoding("images/shivam.jpg", FRmodel)
 
 for key in database:
     path = "/content/face_reco_ct/images2/" + key
